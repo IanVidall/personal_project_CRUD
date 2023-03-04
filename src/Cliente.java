@@ -65,8 +65,5 @@ public class Cliente {
 
 	}
 
-	public Cliente toString() {
-		return listClientes.get(id)  ;
-	}
 
 }
