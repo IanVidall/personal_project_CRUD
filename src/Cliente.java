@@ -17,6 +17,20 @@ public class Cliente {
 		listClientes.add(novoCliente);
 	}
 
+	public boolean excluirCliente(int idCliente) {
+
+		for (Cliente cliente : listClientes) {
+
+			if (cliente.getId() == idCliente) {
+
+				listClientes.remove(cliente);
+				return true;
+			}
+		}
+		
+		return false;
+	}
+
 	public void excluirCliente() {
 		listClientes.remove(id);
 	}
@@ -63,6 +77,13 @@ public class Cliente {
 		System.out.println(" 4 - Mostrar Todos os Clientes");
 		System.out.println(" 5 - Sair.");
 
+	}
+	public String toString() {
+	    String result = "";
+	    for (Cliente cliente : listClientes) {
+	        result += "ID: " + cliente.getId() + ", Nome: " + cliente.getNome() + ", CPF: " + cliente.getCpf() + "\n";
+	    }
+	    return result;
 	}
 
 

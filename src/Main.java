@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main  extends Cliente{
+public class Main {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -25,7 +25,16 @@ public class Main  extends Cliente{
 				break;
 				
 			case 2:
-				System.out.println("Qual Cliente deseja Excluir ? : ");
+				System.out.print("ID do cliente a ser excluído: ");
+				System.out.println(cliente.toString());
+				int idCliente = sc.nextInt();
+				boolean excluiu = cliente.excluirCliente(idCliente);
+				if (excluiu) {
+                    System.out.println("Cliente excluído com sucesso.");
+                } else {
+                    System.out.println("Cliente não encontrado.");
+                }
+				
 				
 				
 			case 4:
